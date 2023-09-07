@@ -15,8 +15,8 @@
 
 	<div class="container-fluid teenpatti-lobby-header py-2 pb-4 pb-sm-2">
 		<div class="row justify-content-between align-items-center">
-			<div class="w-auto d-flex align-items-center">
-				<button class="bg-transparent border-0 p-0 backBtn-teen"><img src="assets/img/teenpatti-back.png" width="60" /></button>
+			<div class="w-auto d-flex align-items-center position-relative" style="z-index: 1;">
+				<button class="bg-transparent border-0 p-0 backBtn-teen" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu"><img src="assets/img/teenpatti-back.png" width="60" /></button>
 				<div class="d-flex align-items-center position-relative">
 			<div class="teenpattilobby-profile position-relative p-2">
 				<img src="assets/img/man.png" class="w-100">
@@ -27,15 +27,15 @@
 		</div>
 			</div>
 			<div class="w-auto header-center-logo">
-				<div class="d-flex align-items-end justify-content-center">
+				<div class="d-flex align-items-end justify-content-center" data-bs-toggle="modal" data-bs-target="#inviteModal">
 					<p class="mb-0 player-top">Players : <span class="teenpatti-primecolor">50</span></p>
 					<img class="teenpattiLogo" src="assets/img/logo.png" width="150" />
 					<p class="mb-0 player-top">Tables : <span class="teenpatti-primecolor">20</span></p>
 				</div>
 			</div>
-			<div class="w-auto">
-				<button class="bg-transparent border-0 p-0 position-relative privateBtn-teen"><img src="assets/img/priavtepatti.png" width="70" /><span class="d-block position-absolute text-center text-black w-100" style="bottom:-2px;font-size: 14px;">private</span></button>
-				<button class="bg-transparent border-0 p-0 settingBtn-teen"><img src="assets/img/setting-teenpatti.png" width="50" /></button>
+			<div class="w-auto position-relative" style="z-index: 1;">
+				<button class="bg-transparent border-0 p-0 position-relative privateBtn-teen" data-bs-toggle="offcanvas" data-bs-target="#offcanvasPrivate"><img src="assets/img/priavtepatti.png" width="70" /><span class="d-block position-absolute text-center text-black w-100" style="bottom:-2px;font-size: 14px;">private</span></button>
+				<button class="bg-transparent border-0 p-0 settingBtn-teen" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSetting"><img src="assets/img/setting-teenpatti.png" width="50" /></button>
 			</div>
 		</div>
 	</div>
@@ -45,7 +45,7 @@
 			<div class="w-100 classic-border classic-border-1" style="border-color: #13ff00;">
 			<div class="row align-items-center">
 				<div class="col-3 col-md-2 text-center py-2 classicborder-right d-flex justify-content-center flex-wrap">
-					<p class="classic-text text-center mb-0">
+					<p class="classic-text text-center mb-0" data-bs-toggle="modal" data-bs-target="#classicModal">
 						<span class="classic-top">100</span><br>
 						classic
 					</p>
@@ -251,6 +251,352 @@
 		
 	</div>
 
+</div>
+
+
+<!-- Menu -->
+
+<div class="offcanvas offcanvas-start modal-teenpatti-bg menu-offcanvas" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header p-0 align-items-start pb-2">
+    <h5 class="offcanvas-title d-flex align-items-center pt-2 ps-2" id="offcanvasExampleLabel"><img class="offcanvas-profile" src="assets/img/man.png" /> Faizal ali</h5>
+    <button type="button" class="btn-close text-reset modalClose-btn m-0 opacity-100" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <div class="offcanvas-body px-0">
+    <div class="w-100">
+      <ul class="list-group list-group-flush bg-transparent menu-item-offcanvas">
+  <li class="list-group-item bg-transparent text-white p-0"><a class="d-block text-white p-2" href="#"><img src="assets/img/history.png" />Deposit history</a></li>
+  <li class="list-group-item bg-transparent text-white p-0"><a class="d-block text-white p-2" href="#"><img src="assets/img/trophy.png" />Trophy</a></li>
+  <li class="list-group-item bg-transparent text-white p-0"><a class="d-block text-white p-2" href="#"><img src="assets/img/money-icon.png" />Money</a></li>
+</ul>
+    </div>
+    
+  </div>
+
+  <div class="offcanvas-footer align-items-start p-2 text-center">
+    <button class="logOutBtn" data-bs-toggle="modal" data-bs-target="#exitmodal-id">Logout</button>
+  </div>
+
+</div>
+
+<div class="offcanvas offcanvas-end modal-teenpatti-bg menu-offcanvas settings-offcanvas" tabindex="-1" id="offcanvasSetting" aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header p-0 align-items-start pb-2 d-flex">
+  	<button type="button" class="btn-close text-reset modalClose-btn m-0 opacity-100" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    <h5 class="offcanvas-title pt-2 pe-2 w-100 text-center" id=""> Settings</h5>
+    
+  </div>
+  <div class="offcanvas-body px-0">
+    <div class="w-100">
+      <ul class="list-group list-group-flush bg-transparent menu-item-offcanvas">
+  <li class="list-group-item bg-transparent text-white p-0">
+  	<a class="d-flex justify-content-between text-white p-2" href="#">
+  		Sound <img class="m-0" src="assets/img/music-icon.png" /></a>
+  	</li>
+  <li class="list-group-item bg-transparent text-white p-0">
+  	<a class="d-flex justify-content-between text-white p-2" href="#">
+  		Music <img class="m-0" src="assets/img/sound-icon.png" /></a>
+  	</li>
+  <li class="list-group-item bg-transparent text-white p-0">
+  	<a class="d-flex justify-content-between text-white p-2" href="#">
+  		Vibration <img class="m-0 bg-transparent h-auto" style="background:transparent;" src="assets/img/vib-icon.png" /></a>
+  </li>
+  <li class="list-group-item bg-transparent text-white p-0">
+  	<a class="d-flex justify-content-between text-white p-2" href="#">
+  		Chat <img class="m-0 bg-transparent h-auto" style="background:transparent;" src="assets/img/chat-icon.png" /></a>
+  </li>
+</ul>
+    </div>
+    
+  </div>
+
+  
+
+</div>
+
+
+
+<!-- Private table -->
+
+<div class="offcanvas offcanvas-end modal-teenpatti-bg menu-offcanvas border-end-0" style="border-left: 1px solid #13ff00 !important;" tabindex="-1" id="offcanvasPrivate" aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header p-0 align-items-start pb-2 d-flex">
+  	<button type="button" class="btn-close text-reset modalClose-btn m-0 opacity-100" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    <h5 class="offcanvas-title pt-2 pe-2 w-100 text-center" id=""> Join private table</h5>
+    
+  </div>
+  <div class="offcanvas-body px-0">
+    <div class="w-100 d-flex justify-content-center flex-wrap pt-5">
+     <p class="mb-2 insert-code-block w-100 text-center">Insert code</p>
+     <span class="insert-code">54905674231</span>
+    </div>
+    
+  </div>
+
+  <div class="offcanvas-footer align-items-start p-2 text-center">
+    <button class="btn bg-transparent p-0"><img src="assets/img/joinplay.png" width="130" /></button>
+    <p class="mb-3 mt-5">Want to create private table? <button class="btn bg-transparent p-0 ms-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvascreatPrivate"><img src="assets/img/createnew.png" width="100" /></button></p>
+  </div>
+
+</div>
+
+<div class="offcanvas offcanvas-end modal-teenpatti-bg menu-offcanvas border-end-0" style="border-left: 1px solid #13ff00 !important;" tabindex="-1" id="offcanvascreatPrivate" aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header p-0 align-items-start pb-2 d-flex">
+  	<button type="button" class="btn-close text-reset modalClose-btn m-0 opacity-100" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    <h5 class="offcanvas-title pt-2 pe-2 w-100 text-center" id=""> Create private table</h5>
+    
+  </div>
+  <div class="offcanvas-body px-0">
+    <div class="w-100 d-flex justify-content-center table-radio my-4">
+    	Table for 
+    	<div class="ms-2 d-flex tablefor-bg">
+    		<div class="form-check">
+  <input class="form-check-input position-absolute opacity-0 invisible" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <label class="form-check-label" for="flexRadioDefault1">
+    5
+  </label>
+</div>
+<div class="form-check ms-3">
+  <input class="form-check-input position-absolute opacity-0 invisible" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+  <label class="form-check-label" for="flexRadioDefault2">
+    8
+  </label>
+</div>
+</div>
+
+    </div>
+
+    <div class="row m-0 privateTableForm">
+    	<div class="col-6 mb-3">
+    		<label class="form-label">Boot</label>
+    		<input type="text" class="form-control" value="15.00" readonly name="">
+    	</div>
+    	<div class="col-6 mb-3">
+    		<label class="form-label">Blind limit</label>
+    		<input type="text" class="form-control" value="" readonly name="">
+    	</div>
+    	<div class="col-6 mb-3">
+    		<label class="form-label">Chal limit</label>
+    		<input type="text" class="form-control" value="15.00" readonly name="">
+    	</div>
+    	<div class="col-6">
+    		<label class="form-label">pot limit</label>
+    		<input type="text" class="form-control" value="" readonly name="">
+    	</div>
+    	<div class="col-6">
+    		<label class="form-label">valid for</label>
+    		<input type="text" class="form-control" value="15.00" readonly name="">
+    	</div>
+    </div>
+    
+  </div>
+
+  <div class="offcanvas-footer align-items-start p-2 text-center">
+    <button class="btn bg-transparent p-0"><img src="assets/img/createnew.png" width="130" /></button>
+    <p class="mb-3 mt-5">Want to create private table? <button class="btn bg-transparent p-0 ms-2"><img src="assets/img/joinplay.png" width="100" /></button></p>
+  </div>
+
+</div>
+
+<!-- Modal -->
+<div class="modal fade allModal-block" id="inviteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content position-relative pb-5">
+      <div class="modal-header">
+        <h5 class="modal-title w-100 text-center" id="">Invite & earn</h5>
+        
+        <button type="button" class="btn-close text-reset modalClose-btn m-0 opacity-100 position-absolute start-0 rounded-circle" data-bs-dismiss="modal" aria-label="Close">
+        	<i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="w-100 text-center">
+        	<img class="mb-3" src="assets/img/invite-icon.png" width="90" />
+        	<h2 class="invite-text mb-3">invite your friends to join game, <br>your referral code</h2>
+        	<p class="m-0"><span class="invite-code">Ce25cn45v3</span></p>
+        </div>
+      </div>
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div> -->
+      <div class="text-center position-absolute start-0 end-0" style="bottom: -21px;">
+      	<button class="bg-transparent border-0 p-0" data-bs-toggle="modal" data-bs-target="#disconnectModal"><img width="100" src="assets/img/invite-btn.png" /></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade allModal-block" id="disconnectModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content position-relative pb-5">
+      <div class="modal-header">
+        <h5 class="modal-title w-100 text-center" id="">internet disconnect</h5>
+        
+        <button type="button" class="btn-close text-reset modalClose-btn m-0 opacity-100 position-absolute start-0 rounded-circle" data-bs-dismiss="modal" aria-label="Close">
+        	<i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="w-100 text-center">
+        	<img class="mb-3" src="assets/img/internet.png" width="90" />
+        	<h2 class="invite-text mb-3">internet connection Failed!!</h2>
+        </div>
+      </div>
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div> -->
+      <div class="text-center position-absolute start-0 end-0" style="bottom: -21px;">
+      	<button class="bg-transparent border-0 p-0"><img width="100" src="assets/img/retry.png" /></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade allModal-block" id="exitmodal-id" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content position-relative">
+      <div class="modal-header">
+        <h5 class="modal-title w-100 text-center" id="">Exit</h5>
+      </div>
+      <div class="modal-body py-5">
+        <div class="w-100 text-center">
+        	<h2 class="invite-text mb-3" style="font-size:32px">do you really <br> want exit ?	</h2>
+        </div>
+        <div class="d-flex justify-content-center">
+        	<button class="bg-transparent border-0 p-0 me-4" data-bs-dismiss="modal">
+        		<img src="assets/img/no.png" width="60" />
+        	</button>
+        	<button class="bg-transparent border-0 p-0">
+        		<img src="assets/img/yes.png" width="60" />
+        	</button>
+        </div>
+      </div>
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div> -->
+    </div>
+  </div>
+</div>
+
+<div class="modal fade allModal-block classicmodal-block" id="classicModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content position-relative">
+      <div class="modal-header">
+      	<div class="w-100">
+      		<div class="row m-0 justify-content-center align-items-center">
+      			<div class="col-12 col-md-10 classicmodal-header">
+      				<div class="row align-items-center justify-content-between">
+      					<div class="w-auto">
+      				<p class="classic-text text-center mb-0" data-bs-toggle="modal" data-bs-target="#classicModal"><span class="classic-top">100</span></p>
+      			</div>
+      		
+					<div class="w-auto">
+						<p class="classic-text text-center mb-0">
+						classic
+					</p>
+					</div>
+					<div class="w-auto">
+						<button class="buyin-btn">Buy - in 500</button>
+					</div>
+      				</div>
+      			</div>
+      	</div>
+      	</div>
+
+        <!-- <div class="text-center py-2 classicborder-right d-flex justify-content-center flex-wrap">
+					<p class="classic-text text-center mb-0" data-bs-toggle="modal" data-bs-target="#classicModal">
+						<span class="classic-top">100</span><br>
+						classic
+					</p>
+					<button class="buyin-btn">Buy - in 500</button>
+				</div> -->
+      </div>
+      <div class="modal-body">
+        <div class="row align-items-center justify-content-between portrait-row" >
+						<div class="col-6 col-md-4 text-center mb-3">
+							<div class="join-play-block w-auto d-inline-block">
+								<p class="mb-0 user-point-block text-center"><span><i class="fa-solid fa-user"></i>&nbsp;&nbsp;0/5</span></p>
+								<p class="join-play-text -0 text-center mb-0">Join &amp; play</p>
+							</div>
+						</div>
+						<div class="col-6 col-md-4  text-center mb-3">
+							<div class="join-play-block w-auto d-inline-block">
+								<p class="mb-0 user-point-block text-center"><span><i class="fa-solid fa-user"></i>&nbsp;&nbsp;0/5</span></p>
+								<p class="join-play-text -0 text-center mb-0">Join &amp; play</p>
+							</div>
+						</div>
+						<div class="col-6 col-md-4  text-center mb-3">
+							<div class="join-play-block w-auto d-inline-block">
+								<p class="mb-0 user-point-block text-center"><span><i class="fa-solid fa-user"></i>&nbsp;&nbsp;0/5</span></p>
+								<p class="join-play-text -0 text-center mb-0">Join &amp; play</p>
+							</div>
+						</div>
+						<div class="col-6 col-md-4  text-center mb-3">
+							<div class="join-play-block w-auto d-inline-block">
+								<p class="mb-0 user-point-block text-center"><span><i class="fa-solid fa-user"></i>&nbsp;&nbsp;0/5</span></p>
+								<p class="join-play-text -0 text-center mb-0">Join &amp; play</p>
+							</div>
+						</div>
+						<div class="col-6 col-md-4 mb-3 text-center">
+							<div class="join-play-block w-auto d-inline-block">
+								<p class="mb-0 user-point-block text-center"><span><i class="fa-solid fa-user"></i>&nbsp;&nbsp;0/5</span></p>
+								<p class="join-play-text -0 text-center mb-0">Join &amp; play</p>
+							</div>
+						</div>
+						<div class="col-6 col-md-4 mb-3 text-center">
+							<div class="join-play-block w-auto d-inline-block">
+								<p class="mb-0 user-point-block text-center"><span><i class="fa-solid fa-user"></i>&nbsp;&nbsp;0/5</span></p>
+								<p class="join-play-text -0 text-center mb-0">Join &amp; play</p>
+							</div>
+						</div>
+
+						<div class="col-6 col-md-4  text-center mb-3">
+							<div class="join-play-block w-auto d-inline-block">
+								<p class="mb-0 user-point-block text-center"><span><i class="fa-solid fa-user"></i>&nbsp;&nbsp;0/5</span></p>
+								<p class="join-play-text -0 text-center mb-0">Join &amp; play</p>
+							</div>
+						</div>
+						<div class="col-6 col-md-4  text-center mb-3">
+							<div class="join-play-block w-auto d-inline-block">
+								<p class="mb-0 user-point-block text-center"><span><i class="fa-solid fa-user"></i>&nbsp;&nbsp;0/5</span></p>
+								<p class="join-play-text -0 text-center mb-0">Join &amp; play</p>
+							</div>
+						</div>
+						<div class="col-6 col-md-4  text-center mb-3">
+							<div class="join-play-block w-auto d-inline-block">
+								<p class="mb-0 user-point-block text-center"><span><i class="fa-solid fa-user"></i>&nbsp;&nbsp;0/5</span></p>
+								<p class="join-play-text -0 text-center mb-0">Join &amp; play</p>
+							</div>
+						</div>
+						<div class="col-6 col-md-4  text-center mb-3">
+							<div class="join-play-block w-auto d-inline-block">
+								<p class="mb-0 user-point-block text-center"><span><i class="fa-solid fa-user"></i>&nbsp;&nbsp;0/5</span></p>
+								<p class="join-play-text -0 text-center mb-0">Join &amp; play</p>
+							</div>
+						</div>
+						<div class="col-6 col-md-4 text-center">
+							<div class="join-play-block w-auto d-inline-block">
+								<p class="mb-0 user-point-block text-center"><span><i class="fa-solid fa-user"></i>&nbsp;&nbsp;0/5</span></p>
+								<p class="join-play-text -0 text-center mb-0">Join &amp; play</p>
+							</div>
+						</div>
+						<div class="col-6 col-md-4 text-center">
+							<div class="join-play-block w-auto d-inline-block">
+								<p class="mb-0 user-point-block text-center"><span><i class="fa-solid fa-user"></i>&nbsp;&nbsp;0/5</span></p>
+								<p class="join-play-text -0 text-center mb-0">Join &amp; play</p>
+							</div>
+						</div>
+						
+						
+					</div>
+					<div class="row mt-3">
+						<div class="col-12 text-center playNow-block">
+							<button class="playnow-btn" style="min-width:200px"><span class="">Play Now</span></button>
+						</div>
+					</div>
+      </div>
+    </div>
+  </div>
 </div>
 
 

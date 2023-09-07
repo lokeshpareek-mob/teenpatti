@@ -1428,7 +1428,7 @@ p {
   src: url('../webfont/all_the_way_to_the_sun/All the Way to the Sun.otf');
   font-family: 'all_the_way_to_the_sun';
 }
-.teenpatti-full * {
+.teenpatti-full *, .modal-teenpatti-bg *, .allModal-block * {
   font-family: 'all_the_way_to_the_sun' !important;
   font-size: 16px;
 }
@@ -1528,7 +1528,7 @@ p {
   bottom: -2px;
   transform: rotate(180deg);
 }
-.teenpatti-full i {
+.teenpatti-full i, .modal-teenpatti-bg i, .allModal-block i {
   font-family: "Font Awesome 6 Free" !important;
 }
 .join-play-block {
@@ -1593,6 +1593,224 @@ p {
   font-size: 22px;
 }
 
+/* -----------------Modal and offcanvas Css----------- */
+
+.modal-teenpatti-bg, .allModal-block .modal-content {
+  background: linear-gradient(#232648, #080808 20%);
+}
+.offcanvas-profile {
+  width: 60px;
+  height: 60px;
+  background: #000;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.offcanvas-title {
+  font-size: 32px;
+  letter-spacing: 1px;
+  text-shadow: 3px 1px 10px #3e3e7b;
+}
+.modalClose-btn {
+  background: linear-gradient(#c71824,#570f13);
+}
+.modalClose-btn i {
+  font-size: 30px;
+  text-shadow: 0 0 8px #000;
+}
+.modalClose-btn {
+  height: auto;
+  width: auto;
+  padding: 3px 12px !important;
+  border-radius: 0 0 0 6px;
+  position: relative;
+  left: 0px;
+}
+.menu-offcanvas .offcanvas-header, .allModal-block .modal-header {
+  border-bottom: 2px dashed #4745c0;
+}
+.logOutBtn {
+  background: linear-gradient(#4442b5,#323071);
+  border: 0;
+  font-size: 26px;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 4px #000;
+  padding: 2px 18px;
+  border-radius: 5px;
+}
+.menu-item-offcanvas li a {
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+.menu-item-offcanvas li a img {
+  width: 40px;
+  margin-right: 10px;
+}
+.menu-offcanvas {
+  border-right: 1px solid #13ff00 !important;
+}
+.menu-item-offcanvas li {
+  border-color: #4745c0;
+}
+.settings-offcanvas .menu-item-offcanvas li a img {
+  background: linear-gradient(#4442b5,#323071);
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  padding: 6px;
+}
+.settings-offcanvas {
+  height: auto !important;
+  top: 0;
+  bottom: inherit;
+  border: 1px solid #13ff00 !important;
+  border-radius: 4px;
+  margin: 5px;
+}
+.settings-offcanvas .modalClose-btn {
+  border-radius: 4px 0 6px 0;
+}
+.insert-code-block {
+  font-size: 32px;
+  letter-spacing: 1px;
+}
+.insert-code {
+  background: #0d1721;
+  color: #ffb503;
+  font-size: 28px;
+  letter-spacing: 1px;
+  padding: 6px 25px;
+  border-radius: 35px;
+  min-width: 235px;
+  text-align: center;
+}
+.table-radio {
+  font-size: 32px;
+  letter-spacing: 1px;
+  align-items: center;
+}
+.table-radio .form-check-label::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #9afe12;
+  position: absolute;
+  left: -26px;
+  background: #000;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.table-radio .form-check-label {
+  position: relative;
+  font-size: 28px;
+}
+.tablefor-bg {
+  background: #0d1721;
+  padding: 0px 20px;
+  border-radius: 25px;
+}
+.table-radio input:checked + .form-check-label::before {
+  background: #6d6db3;
+}
+.privateTableForm .form-label {
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin-bottom: 2px;
+}
+.privateTableForm .form-control {
+  background: #0d1721;
+  padding: 0px 20px;
+  border-radius: 25px;
+  border: 0;
+  color: #6d6cb0;
+  font-size: 18px;
+  letter-spacing: 1px;
+  padding: 8px 15px;
+}
+.allModal-block .modal-title {
+  font-size: 32px;
+  letter-spacing: 1px;
+  text-shadow: 7px 1px 8px #1d1c3b;
+}
+.invite-text {
+  font-size: 22px;
+}
+.invite-code {
+  background: #312f70;
+  color: #fab301;
+  font-size: 22px;
+  letter-spacing: 1px;
+  padding: 8px 12px;
+  border-radius: 25px;
+  min-width: 180px;
+  display: inline-block;
+  font-weight: 400;
+}
+.allModal-block .modal-content {
+  border: 1px solid #13ff00;
+  border-radius: 4px;
+}
+.allModal-block .modal-content .modalClose-btn {
+  background: #ff0d0c;
+  width: 40px;
+  height: 40px;
+  padding: 0 !important;
+  left: 10px !important;
+  top: 8px;
+}
+.classicmodal-block .modal-dialog {
+  max-width: 55%;
+}
+
+
+@media (max-width: 992px) {
+  .classicmodal-block .modal-dialog {
+  max-width: 95%;
+}
+.menu-offcanvas {
+  width: 90% !important;
+}
+}
+
+@media (max-width:767px) {
+  .classicmodal-block .modal-dialog {
+  max-width: 70%;
+  margin-right: 4px;
+  margin-left: auto;
+}
+.classicmodal-block .user-point-block span, .classicmodal-block .user-point-block i {
+    font-size: 12px !important;
+  }
+  .classicmodal-block .join-play-text {
+    font-size: 14px;
+  }
+  .classicmodal-block .playnow-btn {
+  width: auto !important;
+  display: inline-block;
+  min-width: inherit !important;
+  padding: 3px 15px;
+}
+.classicmodal-block .playnow-btn span {
+  font-size: 22px;
+}
+.classicmodal-header, .classicmodal-header .w-auto {
+  padding: 0;
+}
+.classicmodal-header .classic-top, .classicmodal-header .classic-text {
+    font-size: 22px;
+}
+.classicmodal-header .buyin-btn {
+  font-size: 12px;
+}
+
+}
+
+
+
+/* -----------------Modal and offcanvas Css End!----------- */
 
 
 @media (max-width: 1180px) {
